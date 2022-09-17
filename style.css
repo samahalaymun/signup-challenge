@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --Grayish-blue: hsl(246, 25%, 77%);
+  --green: hsl(154, 59%, 51%);
+}
+body {
+  height: 100vh;
+  font-size: 16px;
+  font-family: "Poppins";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-image: url(images/bg-intro-desktop.png);
+  background-color: var(--red);
+  overflow-y: auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: calc(100% - 150px);
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.row .introduction {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 50px;
+}
+.row .introduction h1,
+p {
+  color: white;
+}
+.row .introduction h1 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+.row .introduction p {
+  line-height: 1.5;
+  text-align: center;
+}
+.row .signup-form {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-left: 20px;
+}
+
+.row .signup-form .wrapper {
+  width: 450px;
+  background: white;
+  padding: 35px;
+  box-shadow: 0 5px 2px -2px gray;
+  border-radius: 7px;
+}
+.row .signup-form .btn {
+  border: none;
+  outline: none;
+  padding: 15px;
+  border-radius: 7px;
+  color: white;
+  box-shadow: 0 5px 2px -2px gray;
+  margin-bottom: 15px;
+}
+.row .signup-form .header {
+  width: 450px;
+
+  background-color: var(--blue);
+}
+.row .signup-form .wrapper .submit {
+  width: 100%;
+  background-color: var(--green);
+  text-transform: capitalize;
+  margin-top: 15px;
+}
+.row .signup-form .wrapper input {
+  padding: 15px;
+  font-weight: 600;
+  color: var(--dark-blue);
+  border: none;
+  outline: none;
+  border-radius: 7px;
+}
+
+.row .signup-form .wrapper .form-input{
+  margin-top: 15px;
+  
+}
+.row .signup-form .wrapper .form-input .form-control{
+  display: flex;
+  justify-content: space-between;
+  border-radius: 7px;
+  width: 100%;
+  border: 1px solid #ccc;
+  
+}
+.row .signup-form .wrapper .form-input input:focus{
+  
+}
+.row .signup-form .wrapper .form-input .form-control input{
+   flex: 1 1 0%;
+}
+.row .signup-form .wrapper .form-input .form-control .img{
+  display: flex;
+  align-items: center;
+}
+.row .signup-form .wrapper .form-input .form-control img{
+  width: 25px;
+  height: 25px;
+  margin-right: 20px; 
+}
+.row .signup-form .wrapper .form-input .form-control:focus{
+  border: 1px solid var(--blue);
+}
+.row .signup-form .wrapper .form-input:first-child{
+  margin-top: 0;
+}
+.row .signup-form .wrapper p {
+  color: grey;
+  font-size: 10px;
+  padding: 0 10px;
+  text-align: center;
+}
+.row .signup-form .wrapper .error {
+  color: var(--red);
+  font-size: 10px;
+  text-align: end;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 0px;
+}
+
+.row .signup-form .wrapper p span {
+  color: var(--red);
+  font-size: 12px;
+}
+.display{
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+@media (max-width: 768px) {
+  .row .introduction h1 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 100px;
+  }
+  .row .introduction {
+    padding: 50px 0;
+  }
+
+}
+@media (max-width: 912px) {
+  .row .introduction,
+  .row .signup-form {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .row .signup-form {
+    padding-left: 0 ;
+  }
+  .row .signup-form .wrapper,
+  .row .signup-form .header {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    width: calc(100%);
+    padding: 80px 20px;
+  }
+}
